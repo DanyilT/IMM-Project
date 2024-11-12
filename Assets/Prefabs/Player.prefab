@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6927541649019333398}
   - component: {fileID: 1327316137492550639}
   - component: {fileID: 5857113365775478518}
+  - component: {fileID: 756268744291712490}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -103,7 +104,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -123,4 +124,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d550e09b4e7364468a2d7158d148a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ground: {fileID: 1333018387156357346, guid: c3101054de23a7f4c9935e36d12a28db, type: 3}
+  speed: 5
+  groundTag: Ground
+--- !u!114 &756268744291712490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2990493509815276834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c535c5a3872e53409d86965bf8eb118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 8309840092379618900, guid: 79c2278b67edb6c4bbee810b02956537, type: 3}
+  spawnInterval: 1
