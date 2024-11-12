@@ -3,9 +3,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed = 5f;
-    private Camera mainCamera;
     [SerializeField] private string groundTag = "Ground";
-    private Vector3 cameraOffset;
     private Vector3 touchStartPos;
     private Vector3 playerStartPos;
     private bool isDragging = false;
@@ -15,27 +13,15 @@ public class PlayerController : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        mainCamera = Camera.main;
-        cameraOffset = mainCamera.transform.position - transform.position;
         CalculateBoundaries();
     }
 
     // Update is called once per frame
     void Update()
     {
-        MoveForward();
         HandleKeyboardInput();
         HandleMouseOrTouchInput();
         ClampPosition();
-    }
-
-    // Move the player forward
-    void MoveForward()
-    {
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        Vector3 cameraPosition = mainCamera.transform.position;
-        cameraPosition.z = transform.position.z + cameraOffset.z;
-        mainCamera.transform.position = cameraPosition;
     }
 
     // Handle Horizontal keyboard input (A, D / Left, Right)
