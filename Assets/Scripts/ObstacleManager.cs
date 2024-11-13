@@ -1,9 +1,25 @@
 using System;
+using TMPro;
 using UnityEngine;
 
 public class ObstacleManager : MonoBehaviour
 {
     [SerializeField] private int obstacleHitCount = 0;
+    private TextMeshProUGUI value;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        // Get the Text on the Obstacle
+        value = GetComponentInChildren<Canvas>().GetComponentInChildren<TextMeshProUGUI>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Update the Text on the Obstacle
+        value.text = obstacleHitCount.ToString();
+    }
 
     // Handle collision
     void OnCollisionEnter(Collision collision)
