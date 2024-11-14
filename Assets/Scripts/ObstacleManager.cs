@@ -73,6 +73,7 @@ public class ObstacleManager : MonoBehaviour
     private void HandleProjectileCollision(Collision collision)
     {
         obstacleHitCount++;
+        Destroy(collision.gameObject);
     }
 
     // Handle collision
