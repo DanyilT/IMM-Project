@@ -30,7 +30,8 @@ public class ObstacleManager : MonoBehaviour
         ObstacleHitCountWatcher();
 
         // Destroy the Obstacle if the Obstacle behind the Player
-        DestroyIfBehindThePlayer();
+        // this logic is not necessary it doesnt not affect gameplay 
+       // DestroyIfBehindThePlayer();
     }
 
     // Update the Text and Material based on the Obstacle Count

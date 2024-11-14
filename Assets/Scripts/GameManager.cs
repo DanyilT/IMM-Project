@@ -15,47 +15,48 @@ public class GameManager : MonoBehaviour
     // Create copies of the player at the nearest available space on the ground
     public void CreatePlayerCopies(int numberOfCopies)
     {
-        playerCount += numberOfCopies;
+        playerCount = 1;
 
-        // If the number of copies is positive: create the copies
-        if (numberOfCopies >= 1)
+        if (playerPrefab == null)
         {
-            for (int i = 0; i < numberOfCopies; i++)
-            {
-                Vector3 spawnPosition = FindNearestAvailableSpace(); // Have to implement this function
-
-                if (spawnPosition != Vector3.positiveInfinity)
-                {
-                    Debug.Log("Spawn position: " + spawnPosition);
-                    Instantiate(playerPrefab, spawnPosition, playerPrefab.transform.rotation);
-                    Debug.Log("Player copy created");
-                }
-                else
-                {
-                    Debug.LogError("Failed to find a valid spawn position");
-                }
-            }
+            Debug.LogError("Player prefab is not assigned!");
+            return;
+        }
+  // Find the main player's transform to determine where to spawn copies
+    Transform mainPlayerTransform = GameObject.FindWithTag("Player").transform;
+    
+    // Starting offset distance for clones
+    float offsetDistance = 2f;
+    
+    for (int i = 0; i < playerCount; i++)
+    {
+        // Alternate between left and right side
+        Vector3 offset;
+        if (i % 2 == 0) // Place on the right side
+        {
+            offset = new Vector3(offsetDistance * ((i / 2) + 1), 0, 0);
+        }
+        else // Place on the left side
+        {
+            offset = new Vector3(-offsetDistance * ((i / 2) + 1), 0, 0);
         }
 
-        // If the number of copies is negative: destroy the copies
-        else if (numberOfCopies < 0)
-        {
-            GameObject[] playerUnits = GameObject.FindGameObjectsWithTag("Player");
+        // Set spawn position by adding offset to main player's position
+        Vector3 spawnPosition = mainPlayerTransform.position + offset;
+        spawnPosition.y = 1; // Set Y position to ensure clones spawn on the ground
 
-            if (playerCount > 0)
-            {
-                for (int i = 0; i < Mathf.Abs(numberOfCopies); i++)
-                {
-                    Destroy(playerUnits[playerUnits.Length - 1 - i]);
-                    Debug.Log("Player copy destroyed");
-                }
-            }
-            else
-            {
-                // TODO: Implement the real game over logic later
-                Debug.Log("Game Over");
-            }
+        // Instantiate the player copy
+        GameObject playerClone = Instantiate(playerPrefab, spawnPosition, Quaternion.identity);
+
+        if (playerClone != null)
+        {
+            Debug.Log("Player copy created at position: " + spawnPosition);
         }
+        else
+        {
+            Debug.LogError("Failed to create player copy.");
+        }
+    }
     }
 
     // Find the nearest available space on the ground
