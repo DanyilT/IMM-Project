@@ -1,16 +1,34 @@
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject playerPrefab;
     public int playerCount = 1;
+    public int playerBonus = 1;
+    public bool isGameOver = false;
 
     // Update is called once per frame
     void Update()
     {
-
+        if (playerCount <= 0 && !isGameOver)
+        {
+            isGameOver = true;
+            Debug.Log("Game Over");
+            Time.timeScale = 0;
+        }
     }
+
+    // Restart the scene
+    public void RestartScene()
+    {
+        Time.timeScale = 1; // Resume time
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    // --- Player Copy Creation --- //
+    // Not using this for now, because it is not implemented  fully yet
 
     // Create copies of the player at the nearest available space on the ground
     public void CreatePlayerCopies(int numberOfCopies)
