@@ -76,14 +76,4 @@ public class GameManager : MonoBehaviour
         }
     }
     }
-
-    // Find the nearest available space on the ground
-    private Vector3 FindNearestAvailableSpace()
-    {
-        // TODO: Have To Implement This Function
-        // Find the nearest available space to all player's units on the ground (use Tag: Ground) and return the position (Vector3)
-        // Note: Y position should be 1 (it is will spawn on the ground)
-
-        return Vector3.positiveInfinity;
-    }
 }
