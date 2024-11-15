@@ -83,4 +83,5 @@ The project was created by [Dany](https://github.com/DanyilT) & [Artem Surzhenko
 
 - The project uses the LiberationSans font, licensed under the SIL Open Font License, Version 1.1. See [Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt](Assets/TextMesh%20Pro/Fonts/LiberationSans%20-%20OFL.txt) for details.
 
+---
 Thank you for your interest in the IMM-Project. We look forward to your contributions and feedback!
