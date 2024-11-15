@@ -77,7 +77,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ### Authors
 
-The project was created by [Dany](https://github.com/DanyilT) & [Artem Surzhenko](https://github.com/artemsa223)
+The project was created by [Danyil Tymchuk](https://github.com/DanyilT) & [Artem Surzhenko](https://github.com/artemsa223)
 
 ## Acknowledgements
 
