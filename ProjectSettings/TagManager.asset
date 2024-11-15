@@ -9,6 +9,7 @@ TagManager:
   - Projectile
   - 'Negative Obstacle '
   - Enemy
+  - lvl
   layers:
   - Default
   - TransparentFX
