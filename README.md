@@ -15,7 +15,7 @@ Welcome to the alpha version of the IMM-Project, an Interactive Multimedia Final
 
 > [!IMPORTANT]
 > Description and other important stuff, write about wwhere can find buid and play the game
-> - [Build on Github Pages](https://danyilt.github.io/IMM-Project/WebGL%20Build/)
+> - [Build on Github Pages](https://danyilt.github.io/IMM-Project/WebGL%20Build/Alpha)
 > - [Build on Unity Play](https://play.unity.com/en/games/be8af042-a14e-4193-aecf-f13a0b93ce2f/imm-project-alpha)
 
 ### Research
