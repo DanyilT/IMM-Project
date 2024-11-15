@@ -20,6 +20,6 @@ public class PlayerManager : MonoBehaviour
     // Spawn a projectile
     void SpawnProjectile()
     {
-        Instantiate(projectilePrefab, transform.position, transform.rotation);
+        Instantiate(projectilePrefab, transform.position, Quaternion.identity);
     }
 }
