@@ -28,10 +28,6 @@ public class ObstacleManager : MonoBehaviour
     {
         // Update the Text on the Obstacle
         ObstacleHitCountWatcher();
-
-        // Destroy the Obstacle if the Obstacle behind the Player
-        // this logic is not necessary it doesnt not affect gameplay 
-       // DestroyIfBehindThePlayer();
     }
 
     // Update the Text and Material based on the Obstacle Count
@@ -55,41 +51,36 @@ public class ObstacleManager : MonoBehaviour
         }
     }
 
-    // Destroy the Obstacle if the Obstacle behind the Player
-    private void DestroyIfBehindThePlayer()
-    {
-        if (transform.position.z < GameObject.Find("Player").GetComponent<Transform>().position.z)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    private void HandlePlayerCollision(Collision collision)
+    private void HandlePlayerCollision(Collider other)
     {
         GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        gameManager.CreatePlayerCopies(obstacleHitCount);
+        gameManager.playerCount += obstacleHitCount;
+        if (gameManager.playerCount < 0) Debug.Log("Game Over"); // Implement real game over logic later
+        //gameManager.CreatePlayerCopies(obstacleHitCount);
         Destroy(gameObject);
     }
 
-    private void HandleProjectileCollision(Collision collision)
+    private void HandleProjectileCollision(Collider other)
     {
-        obstacleHitCount++;
-        Destroy(collision.gameObject);
+        GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        obstacleHitCount += gameManager.playerCount * gameManager.playerBonus;
+        //obstacleHitCount++;
+        Destroy(other.gameObject);
     }
 
-    // Handle collision
-    private void OnCollisionEnter(Collision collision)
+    // Handle the Collision Collider
+    private void OnTriggerEnter(Collider other)
     {
         // Check if this gameObject collides with another GameObject
-        if (collision.gameObject != null)
+        if (other.gameObject != null)
         {
-            if (collision.gameObject.CompareTag("Player"))
+            if (other.gameObject.CompareTag("Player"))
             {
-                HandlePlayerCollision(collision);
+                HandlePlayerCollision(other);
             }
-            else if (collision.gameObject.CompareTag("Projectile"))
+            else if (other.gameObject.CompareTag("Projectile"))
             {
-                HandleProjectileCollision(collision);
+                HandleProjectileCollision(other);
             }
         }
     }
