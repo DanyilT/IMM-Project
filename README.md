@@ -21,6 +21,7 @@ Welcome to the alpha version of the IMM-Project, an Interactive Multimedia Final
 ### Research
 
 > [!NOTE]
+> Here you list the sources used for development, inspiration, and learning. Use a structured approach:
 > - [Join Clash 3D Game](https://www.capermint.com/blog/cost-to-develop-join-clash-3d-game)
 > - [Basic concepts](https://www.youtube.com/watch?v=t2O7E4B34Zo)
 > - [Advisor](https://chatgpt.com/)
