@@ -4,24 +4,38 @@ Welcome to the alpha version of the IMM-Project, an Interactive Multimedia Final
 
 ## Table of Contents
 
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
+- [IMM-Project (Alpha Version)](#imm-project-alpha-version)
+  - [Table of Contents](#table-of-contents)
+  - [Main Section, not that boring stuff that is after this section](#main-section-not-that-boring-stuff-that-is-after-this-section)
+    - [Where to Play](#where-to-play)
+    - [Research](#research)
+  - [Getting Started](#getting-started)
+  - [Project Structure](#project-structure)
+  - [Contributing](#contributing)
+  - [License](#license)
     - [Authors](#authors)
-- [Acknowledgements](#acknowledgements)
+  - [Acknowledgements](#acknowledgements)
 
-## In the section have to be something important
+## Main Section, not that boring stuff that is after this section
 
-> [!IMPORTANT]
-> Description and other important stuff, write about wwhere can find buid and play the game
-> - [Build on Github Pages](https://danyilt.github.io/IMM-Project/WebGL%20Build/Alpha)
-> - [Build on Unity Play](https://play.unity.com/en/games/be8af042-a14e-4193-aecf-f13a0b93ce2f/imm-project-alpha)
+> [!TIP]
+> This is the main section of the README file. It contains the main information about the project, everything you need to know about the project without Project Structure, Clone, Contributing and License sections. This section is the first thing that the user sees when they open the README file. It should contain the most important information about the project, such as where to play, research, and other important information.
+
+### Where to Play
+
+There is only WebGL build available for now (for Alpha version). You can play the game on your browser :computer:.
+
+> [!IMPORTANT] Where to play the game
+> WebGL Buids released on:
+> - [Github Pages](https://danyilt.github.io/IMM-Project/WebGL%20Build/Alpha)
+> - [Unity Play](https://play.unity.com/en/games/be8af042-a14e-4193-aecf-f13a0b93ce2f/imm-project-alpha)
 
 ### Research
 
+We have done some research to develop this project. Based on our experience on ads that display the similar games, but the game wasn't the same. We decided to create a game that will be similar to that ads. We have found some useful information that helped us to develop the game.
+
 > [!NOTE]
-> Here you list the sources used for development, inspiration, and learning. Use a structured approach:
+> Here is a list of sources used for development, inspiration, and learning. Use a structured approach:
 > - [Join Clash 3D Game](https://www.capermint.com/blog/cost-to-develop-join-clash-3d-game)
 > - [Basic concepts](https://www.youtube.com/watch?v=t2O7E4B34Zo)
 > - [Advisor](https://chatgpt.com/)
