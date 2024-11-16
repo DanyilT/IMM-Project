@@ -25,7 +25,9 @@ Welcome to the alpha version of the IMM-Project, an Interactive Multimedia Final
 
 There is only WebGL build available for now (for Alpha version). You can play the game on your browser :computer:.
 
-> [!IMPORTANT] Where to play the game
+> :warning: **Warning**: The WebGL build is not optimized for mobile devices. We recommend playing the game on a desktop or laptop for the best experience.
+
+> [!IMPORTANT]
 > WebGL Buids released on:
 > - [Github Pages](https://danyilt.github.io/IMM-Project/WebGL%20Build/Alpha)
 > - [Unity Play](https://play.unity.com/en/games/be8af042-a14e-4193-aecf-f13a0b93ce2f/imm-project-alpha)
@@ -44,10 +46,10 @@ We have done some research to develop this project. Based on our experience on a
 
 To get started with the project, follow these steps:
 
-- Install Unity Hub and Unity 6000.0.25f1 (we are using this version, but you can try other versions)
+- **Install Unity Hub and Unity** `6000.0.25f1` (we are using this version, but you can try other versions)
     1. Download and install Unity Hub from the [Unity website](https://unity3d.com/get-unity/download).
-    2. Install Unity Editor version `6000.0.25f1`
-- Clone the repository
+    2. Install Unity Editor
+- **Clone the repository**
     1. Clone the repository. (the alpha branch - this branch)
         ```sh
         git clone -b alpha https://github.com/DanyilT/IMM-Project
