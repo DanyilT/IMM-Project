@@ -64,7 +64,7 @@ public class EnemyManager : MonoBehaviour
         Destroy(other.gameObject);
         if (enemiesCount <= 0)
         {
-            gameManager.playerBonus = bonusValue;
+            gameManager.playerBonus *= bonusValue;
             Destroy(gameObject);
         }
     }
