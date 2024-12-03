@@ -1632,7 +1632,7 @@ MonoBehaviour:
   settingsPanel: {fileID: 1120028100}
   settingsButton: {fileID: 2138812853}
   closeSettingsButton: {fileID: 1260130977}
-  sceneName: Main
+  sceneName: Level 1
 --- !u!4 &1850017369
 Transform:
   m_ObjectHideFlags: 0
