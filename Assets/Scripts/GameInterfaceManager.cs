@@ -84,11 +84,9 @@ public class GameInterfaceManager : MonoBehaviour
 
     private void RestartGame()
     {
-        Debug.Log("Restarting the game");
         Time.timeScale = 1;
         gameManager.isGameOver = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Debug.Log("Game restarted");
     }
 
     private void ExitToHome()
