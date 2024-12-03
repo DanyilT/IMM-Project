@@ -51,7 +51,6 @@ public class EnemyManager : MonoBehaviour
     {
         GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameManager.playerCount -= enemiesCount;
-        if (gameManager.playerCount < 0) Debug.Log("Game Over"); // Implement real game over logic later
         //gameManager.CreatePlayerCopies(obstacleHitCount);
         Destroy(gameObject);
     }
