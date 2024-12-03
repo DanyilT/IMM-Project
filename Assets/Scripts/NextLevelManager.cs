@@ -11,5 +11,9 @@ public class NextLevelManager : MonoBehaviour
             gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
             gameManager.isWin = true;
         }
+        else if (other.gameObject.CompareTag("Projectile"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }
