@@ -80,12 +80,15 @@ public class GameInterfaceManager : MonoBehaviour
     {
         // Load the next level scene
         // SceneManager.LoadScene("NextLevelSceneName");
+        Time.timeScale = 0; // Instead of stopping time -> load the next level scene
+        Debug.Log("Level Up!");
     }
 
     private void RestartGame()
     {
         Time.timeScale = 1;
         gameManager.isGameOver = false;
+        gameManager.isWin = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
