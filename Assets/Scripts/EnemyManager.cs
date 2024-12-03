@@ -34,7 +34,7 @@ public class EnemyManager : MonoBehaviour
     // Generate a random bonus value that is a multiple of 1, 2, 3, 4, or 5
     private void GenerateRandomBonus()
     {
-        int[] multipliers = { 1, 2, 3, 4, 5 };
+        int[] multipliers = { 1, 2, 3};
         int randomIndex = Random.Range(0, multipliers.Length);
         bonusValue = multipliers[randomIndex];
         bonus.text = "×" + bonusValue;

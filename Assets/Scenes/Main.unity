@@ -488,6 +488,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 2990493509815276834, guid: a9d216c955260f1438d5a8c75d24a2c5, type: 3}
   playerCount: 1
   playerBonus: 1
+  isWin: 0
   isGameOver: 0
 --- !u!4 &92614612
 Transform:
@@ -2170,7 +2171,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14d68ecf8ce4cab46a92006e45697841, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a037b0e96d7595e4babb66c6b46aa862, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2200,7 +2201,6 @@ GameObject:
   - component: {fileID: 787256359}
   - component: {fileID: 787256358}
   - component: {fileID: 787256357}
-  - component: {fileID: 787256361}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2295,35 +2295,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &787256361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787256356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b61bfe86871b3bd49bee4b843d57aa2e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseButton: {fileID: 0}
-  scorePanel: {fileID: 0}
-  pausePanel: {fileID: 0}
-  winPanel: {fileID: 0}
-  gameOverPanel: {fileID: 1104094036}
-  playerValueText: {fileID: 0}
-  playerBonusValueText: {fileID: 0}
-  pauseButtonComponent: {fileID: 0}
-  continueButton: {fileID: 0}
-  nextLevelButton: {fileID: 0}
-  restartButton: {fileID: 0}
-  exitButton: {fileID: 0}
-  winContinueButton: {fileID: 0}
-  winExitButton: {fileID: 0}
-  winRestartButton: {fileID: 0}
-  gameOverExitButton: {fileID: 0}
-  gameOverRestartButton: {fileID: 0}
 --- !u!1001 &817543005
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3178,19 +3149,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1074827472}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 92614611}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: RestartScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1074827472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3687,7 +3646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1424419166
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3891,7 +3850,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14d68ecf8ce4cab46a92006e45697841, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a037b0e96d7595e4babb66c6b46aa862, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4127,19 +4086,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1550932822}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 92614611}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: RestartScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1550932822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4542,7 +4489,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14d68ecf8ce4cab46a92006e45697841, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a037b0e96d7595e4babb66c6b46aa862, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4577,7 +4524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1608054230
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5690,6 +5637,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2066120148}
+  - component: {fileID: 2066120149}
   m_Layer: 0
   m_Name: GameInterfaceManager
   m_TagString: Untagged
@@ -5712,6 +5660,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2066120149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066120147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b61bfe86871b3bd49bee4b843d57aa2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scorePanel: {fileID: 1608054229}
+  pausePanel: {fileID: 1328102615}
+  winPanel: {fileID: 1418926375}
+  gameOverPanel: {fileID: 1104094036}
+  playerValueText:
+  - {fileID: 1577536704}
+  - {fileID: 1920659219}
+  - {fileID: 1758137904}
+  playerBonusValueText:
+  - {fileID: 2074093246}
+  - {fileID: 922936027}
+  pauseButton: {fileID: 1424419167}
+  continueButton: {fileID: 1984852935}
+  nextLevelButton: {fileID: 628925684}
+  restartButton:
+  - {fileID: 1550932821}
+  - {fileID: 2125701606}
+  - {fileID: 1074827471}
+  exitButton:
+  - {fileID: 1502857109}
+  - {fileID: 684750068}
+  - {fileID: 1577595226}
+  homeSceneIndex: 0
 --- !u!1 &2074093244
 GameObject:
   m_ObjectHideFlags: 0
@@ -5930,19 +5913,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2125701607}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 92614611}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: RestartScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &2125701607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6203,6 +6174,6 @@ SceneRoots:
   - {fileID: 1380080280}
   - {fileID: 5801313481483372137}
   - {fileID: 1815835627}
+  - {fileID: 2066120148}
   - {fileID: 787256360}
   - {fileID: 46308098}
-  - {fileID: 2066120148}
