@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: ed82281c8655f654e9f84271bdc92597
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207966
+  packageName: Shiny Items
+  packageVersion: 1.2
+  assetPath: Assets/PJFX/ShinyItems/Prefabs/Item_Health.prefab
+  uploadId: 593668

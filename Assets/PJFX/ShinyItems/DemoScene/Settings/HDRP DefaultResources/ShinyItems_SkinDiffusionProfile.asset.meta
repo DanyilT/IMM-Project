@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9b0e524cee861274096cc45ab76fa076
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207966
+  packageName: Shiny Items
+  packageVersion: 1.2
+  assetPath: Assets/PJFX/ShinyItems/DemoScene/Settings/HDRP DefaultResources/ShinyItems_SkinDiffusionProfile.asset
+  uploadId: 593668

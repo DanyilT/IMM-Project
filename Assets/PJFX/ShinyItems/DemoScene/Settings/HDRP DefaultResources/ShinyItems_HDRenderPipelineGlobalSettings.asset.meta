@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f65225da6ce3609439fcf8e94e805af9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207966
+  packageName: Shiny Items
+  packageVersion: 1.2
+  assetPath: Assets/PJFX/ShinyItems/DemoScene/Settings/HDRP DefaultResources/ShinyItems_HDRenderPipelineGlobalSettings.asset
+  uploadId: 593668
