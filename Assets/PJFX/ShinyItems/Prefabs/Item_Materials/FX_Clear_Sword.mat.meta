@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: ec15ad8bfd636604aa7dc765febad297
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207966
+  packageName: Shiny Items
+  packageVersion: 1.2
+  assetPath: Assets/PJFX/ShinyItems/Prefabs/Item_Materials/FX_Clear_Sword.mat
+  uploadId: 593668

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 38b35347542e5af4c9b140950c5b18db
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207966
+  packageName: Shiny Items
+  packageVersion: 1.2
+  assetPath: Assets/PJFX/ShinyItems/DemoScene/Settings/URP Default Assets/ShinyItems_UniversalRenderPipelineGlobalSettings.asset
+  uploadId: 593668

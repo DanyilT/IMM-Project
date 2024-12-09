@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: b170ea32d75b9fd4893cc3a6c0a46ce2
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 207966
+  packageName: Shiny Items
+  packageVersion: 1.2
+  assetPath: Assets/PJFX/ShinyItems/Prefabs/Item_Materials/FX_Explosion.mat
+  uploadId: 593668
