@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
@@ -7,7 +6,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject playerPrefab;
     [SerializeField] private float rowSpacing = 2f; // Space between rows
     [SerializeField] private float columnSpacing = 2f; // Space between players in the same row
-    
+
     public int playerCount = 1; // Starting with 1 for the main player
     public int playerBonus = 1;
     public bool isWin = false;
@@ -17,11 +16,11 @@ public class GameManager : MonoBehaviour
     private List<Vector3> spawnPositions = new List<Vector3>();
     private int currentSpawnIndex = 0;
 
-    private void Start()
+    void Start()
     {
         mainPlayer = GameObject.FindWithTag("Player").transform;
         // Calculate initial positions starting from row 2 (since row 1 has main player)
-        CalculateSpawnPositions(20); 
+        CalculateSpawnPositions(20);
     }
 
     void Update()
@@ -54,7 +53,7 @@ public class GameManager : MonoBehaviour
 
         // Instantiate the player copy
         GameObject playerClone = Instantiate(playerPrefab, worldPosition, mainPlayer.rotation);
-        
+
         if (playerClone != null)
         {
             Debug.Log($"Player copy {playerCount + 1} created at position: " + worldPosition);
@@ -84,7 +83,7 @@ public class GameManager : MonoBehaviour
         {
             // Each row has currentRow number of players
             int playersInThisRow = currentRow;
-            
+
             // Calculate row position (start from second row)
             float rowZOffset = (currentRow - 1) * rowSpacing;
             float startX = -(playersInThisRow - 1) * columnSpacing * 0.5f;
