@@ -5,9 +5,9 @@ using UnityEngine.UI;
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private Button startButton;
-    //[SerializeField] private GameObject instructionsPanel;
-    //[SerializeField] private Button instructionsButton;
-    //[SerializeField] private Button backButton;
+    [SerializeField] private GameObject instructionsPanel;
+    [SerializeField] private Button instructionsButton;
+    [SerializeField] private Button backButton;
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private Button settingsButton;
     [SerializeField] private Button closeSettingsButton;
@@ -20,8 +20,8 @@ public class MainMenuManager : MonoBehaviour
     void Start()
     {
         startButton.onClick.AddListener(StartGame);
-        //instructionsButton.onClick.AddListener(ShowInstructions);
-        //backButton.onClick.AddListener(BackToMain);
+        instructionsButton.onClick.AddListener(ShowInstructions);
+        backButton.onClick.AddListener(BackToMain);
         settingsButton.onClick.AddListener(OpenSettings);
         closeSettingsButton.onClick.AddListener(CloseSettings);
 
@@ -41,15 +41,15 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    //void ShowInstructions()
-    //{
-    //    instructionsPanel.SetActive(true);
-    //}
+    void ShowInstructions()
+    {
+        instructionsPanel.SetActive(true);
+    }
 
-    //void BackToMain()
-    //{
-    //    instructionsPanel.SetActive(false);
-    //}
+    void BackToMain()
+    {
+        instructionsPanel.SetActive(false);
+    }
 
     private void OpenSettings()
     {
