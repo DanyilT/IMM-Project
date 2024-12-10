@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.AI;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -20,6 +19,6 @@ public class PlayerManager : MonoBehaviour
     // Spawn a projectile
     void SpawnProjectile()
     {
-        Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+        Instantiate(projectilePrefab, new Vector3(transform.position.x, transform.position.y + 1.7f, transform.position.z), Quaternion.identity);
     }
 }
