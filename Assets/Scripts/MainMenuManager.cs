@@ -5,17 +5,21 @@ using UnityEngine.UI;
 public class MainMenuManager : MonoBehaviour
 {
     [SerializeField] private Button startButton;
+    [SerializeField] private GameObject instructionsPanel;
     [SerializeField] private GameObject settingsPanel;
     [SerializeField] private Button settingsButton;
+    [SerializeField] private Button instructionsButton;
     [SerializeField] private Button closeSettingsButton;
     [SerializeField] private Slider backgroundMusicVolumeSlider;
     [SerializeField] private Toggle backgroundMusicMuteToggle;
     [SerializeField] private Slider sfxVolumeSlider;
     [SerializeField] private Toggle sfxMuteToggle;
+    [SerializeField] private Button backButton;
     [SerializeField] private string sceneName = "Main";
 
     void Start()
     {
+        instructionsPanel.SetActive(false);
         startButton.onClick.AddListener(StartGame);
         settingsButton.onClick.AddListener(OpenSettings);
         closeSettingsButton.onClick.AddListener(CloseSettings);
@@ -29,6 +33,9 @@ public class MainMenuManager : MonoBehaviour
         backgroundMusicMuteToggle.isOn = MusicManager.instance.MusicVolume != 0;
         sfxVolumeSlider.value = MusicManager.instance.SFXVolume;
         sfxMuteToggle.isOn = MusicManager.instance.SFXVolume != 0;
+
+        instructionsButton.onClick.AddListener(ShowInstructions);
+        backButton.onClick.AddListener(BackToMain);
     }
 
     private void StartGame()
@@ -45,6 +52,7 @@ public class MainMenuManager : MonoBehaviour
     {
         settingsPanel.SetActive(false);
     }
+
 
     private void SetMusicVolume(float volume)
     {
@@ -88,5 +96,15 @@ public class MainMenuManager : MonoBehaviour
                 MusicManager.instance.SetSFXVolume(0);
             }
         }
+    }
+
+    void ShowInstructions()
+    {
+        instructionsPanel.SetActive(true);
+    }
+
+    void BackToMain()
+    {
+        instructionsPanel.SetActive(false);
     }
 }
