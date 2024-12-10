@@ -227,7 +227,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f20320ec161c44badb67feb35261de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 2990493509815276834, guid: a9d216c955260f1438d5a8c75d24a2c5, type: 3}
+  playerPrefab: {fileID: 8514624333787529032, guid: a9d216c955260f1438d5a8c75d24a2c5, type: 3}
+  rowSpacing: 2
+  columnSpacing: 2
   playerCount: 1
   playerBonus: 1
   isWin: 0
