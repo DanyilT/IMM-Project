@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class GameInterfaceManager : MonoBehaviour
 {
     private GameManager gameManager;
-    
+
     [SerializeField] private GameObject scorePanel;
     [SerializeField] private GameObject pausePanel;
     [SerializeField] private GameObject winPanel;
@@ -51,7 +51,7 @@ public class GameInterfaceManager : MonoBehaviour
     {
         for (int i = 0; i < playerValueText.Length; i++)
         {
-            playerValueText[i].text =gameManager.playerCount.ToString();
+            playerValueText[i].text = gameManager.playerCount.ToString();
         }
         for (int i = 0; i < playerBonusValueText.Length; i++)
         {
@@ -79,6 +79,7 @@ public class GameInterfaceManager : MonoBehaviour
     private void NextLevel()
     {
         Time.timeScale = 1;
+        gameManager.isWin = false;
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1 < SceneManager.sceneCountInBuildSettings ? SceneManager.GetActiveScene().buildIndex + 1 : 0;
         SceneManager.LoadScene(nextSceneIndex);
     }
@@ -86,8 +87,9 @@ public class GameInterfaceManager : MonoBehaviour
     private void RestartGame()
     {
         Time.timeScale = 1;
-        gameManager.isGameOver = false;
+        gameManager.playerCount = 1;
         gameManager.isWin = false;
+        gameManager.isGameOver = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
