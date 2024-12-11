@@ -15,6 +15,7 @@ Welcome to the alpha version of the IMM-Project, an Interactive Multimedia Final
   - [License](#license)
     - [Authors](#authors)
   - [Acknowledgements](#acknowledgements)
+    - [Sources](#sources)
 
 ## Main Section, not that boring stuff that is after this section
 
@@ -101,6 +102,10 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 The project was created by [Danyil Tymchuk](https://github.com/DanyilT) & [Artem Surzhenko](https://github.com/artemsa223)
 
 ## Acknowledgements
+
+### Sources
+
+Sources in [sources.md](sources.md)
 
 - The project uses the LiberationSans font, licensed under the SIL Open Font License, Version 1.1. See [Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt](Assets/TextMesh%20Pro/Fonts/LiberationSans%20-%20OFL.txt) for details.
 
