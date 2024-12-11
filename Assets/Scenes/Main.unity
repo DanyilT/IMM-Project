@@ -353,6 +353,7 @@ MonoBehaviour:
   rowSpacing: 2
   columnSpacing: 2
   playerCount: 1
+  playerAmount: 1
   playerBonus: 1
   isWin: 0
   isGameOver: 0
@@ -665,10 +666,6 @@ PrefabInstance:
     - target: {fileID: 4170041112520870118, guid: a9d216c955260f1438d5a8c75d24a2c5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6459385492045117481, guid: a9d216c955260f1438d5a8c75d24a2c5, type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8514624333787529032, guid: a9d216c955260f1438d5a8c75d24a2c5, type: 3}
       propertyPath: m_Name
