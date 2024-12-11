@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 166028973805431178, guid: d1b7cd8b806a48141948803f736c0ccb, type: 3}
       propertyPath: obstacleHitCount
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 221448392579974372, guid: d1b7cd8b806a48141948803f736c0ccb, type: 3}
       propertyPath: obstacleHitCount
@@ -82,7 +82,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2574405572241445712, guid: d1b7cd8b806a48141948803f736c0ccb, type: 3}
       propertyPath: bossHitCount
-      value: 999
+      value: 99999
       objectReference: {fileID: 0}
     - target: {fileID: 2671933032011454415, guid: d1b7cd8b806a48141948803f736c0ccb, type: 3}
       propertyPath: m_IsActive
@@ -162,7 +162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4091688604229624751, guid: d1b7cd8b806a48141948803f736c0ccb, type: 3}
       propertyPath: enemiesCount
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4113569330824010816, guid: d1b7cd8b806a48141948803f736c0ccb, type: 3}
       propertyPath: m_IsActive
@@ -218,7 +218,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5594240024142425491, guid: d1b7cd8b806a48141948803f736c0ccb, type: 3}
       propertyPath: obstacleHitCount
-      value: -10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5602772718090568153, guid: d1b7cd8b806a48141948803f736c0ccb, type: 3}
       propertyPath: m_IsActive
