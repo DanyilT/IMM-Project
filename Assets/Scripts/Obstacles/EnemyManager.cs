@@ -37,7 +37,7 @@ public class EnemyManager : MonoBehaviour
         int[] multipliers = { 1, 2, 3};
         int randomIndex = Random.Range(0, multipliers.Length);
         bonusValue = multipliers[randomIndex];
-        bonus.text = "×" + bonusValue;
+        bonus.text = "ï¿½" + bonusValue;
     }
 
     // Update the Text and Material based on the Obstacle Count
@@ -58,13 +58,13 @@ public class EnemyManager : MonoBehaviour
     private void HandleProjectileCollision(Collider other)
     {
         GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        enemiesCount -= gameManager.playerCount * gameManager.playerBonus;
+        enemiesCount -= gameManager.playerCount;
         //enemiesCount--;
         Destroy(other.gameObject);
         if (enemiesCount <= 0)
         {
-            gameManager.playerBonus *= bonusValue;
             Destroy(gameObject);
+            gameManager.CreatePlayerCopy();
         }
     }
 

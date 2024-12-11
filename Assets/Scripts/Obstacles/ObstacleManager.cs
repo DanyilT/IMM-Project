@@ -55,14 +55,14 @@ public class ObstacleManager : MonoBehaviour
     {
         GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameManager.playerCount += obstacleHitCount;
-        gameManager.CreatePlayerCopy();
+        // gameManager.CreatePlayerCopy();
         Destroy(gameObject);
     }
 
     private void HandleProjectileCollision(Collider other)
     {
         GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        obstacleHitCount += gameManager.playerCount * gameManager.playerBonus;
+        obstacleHitCount += gameManager.playerCount;
         //obstacleHitCount++;
         Destroy(other.gameObject);
     }
