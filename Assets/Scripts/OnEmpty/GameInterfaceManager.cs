@@ -55,7 +55,7 @@ public class GameInterfaceManager : MonoBehaviour
         }
         for (int i = 0; i < playerBonusValueText.Length; i++)
         {
-            playerBonusValueText[i].text = "�" + 1;
+            playerBonusValueText[i].text = "×" + gameManager.playerBonus.ToString();
         }
     }
 
