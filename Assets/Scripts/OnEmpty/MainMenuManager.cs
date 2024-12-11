@@ -13,8 +13,10 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private Button closeSettingsButton;
     [SerializeField] private Slider backgroundMusicVolumeSlider;
     [SerializeField] private Toggle backgroundMusicMuteToggle;
-    [SerializeField] private Slider sfxVolumeSlider;
-    [SerializeField] private Toggle sfxMuteToggle;
+    [SerializeField] private Slider uiVolumeSlider;
+    [SerializeField] private Toggle uiMuteToggle;
+    [SerializeField] private Slider gameEffectVolumeSlider;
+    [SerializeField] private Toggle gameEffectMuteToggle;
     [SerializeField] private string sceneName = "Main";
 
     void Start()
@@ -27,13 +29,17 @@ public class MainMenuManager : MonoBehaviour
 
         backgroundMusicVolumeSlider.onValueChanged.AddListener(SetMusicVolume);
         backgroundMusicMuteToggle.onValueChanged.AddListener(delegate { ToggleMute(backgroundMusicMuteToggle.isOn, "music"); });
-        sfxVolumeSlider.onValueChanged.AddListener(SetSFXVolume);
-        sfxMuteToggle.onValueChanged.AddListener(delegate { ToggleMute(sfxMuteToggle.isOn, "sfx"); });
+        uiVolumeSlider.onValueChanged.AddListener(SetUIVolume);
+        uiMuteToggle.onValueChanged.AddListener(delegate { ToggleMute(uiMuteToggle.isOn, "ui"); });
+        gameEffectVolumeSlider.onValueChanged.AddListener(SetGameEffectVolume);
+        gameEffectMuteToggle.onValueChanged.AddListener(delegate { ToggleMute(gameEffectMuteToggle.isOn, "gameEffect"); });
 
         backgroundMusicVolumeSlider.value = MusicManager.instance.MusicVolume;
         backgroundMusicMuteToggle.isOn = MusicManager.instance.MusicVolume != 0;
-        sfxVolumeSlider.value = MusicManager.instance.SFXVolume;
-        sfxMuteToggle.isOn = MusicManager.instance.SFXVolume != 0;
+        uiVolumeSlider.value = MusicManager.instance.UIVolume;
+        uiMuteToggle.isOn = MusicManager.instance.UIVolume != 0;
+        gameEffectVolumeSlider.value = MusicManager.instance.GameEffectVolume;
+        gameEffectMuteToggle.isOn = MusicManager.instance.GameEffectVolume != 0;
     }
 
     private void StartGame()
@@ -70,18 +76,27 @@ public class MainMenuManager : MonoBehaviour
         }
     }
 
-    private void SetSFXVolume(float volume)
+    private void SetUIVolume(float volume)
     {
-        MusicManager.instance.SetSFXVolume(volume);
-        if (volume > 0 && !sfxMuteToggle.isOn)
+        MusicManager.instance.SetUIVolume(volume);
+        if (volume > 0 && !uiMuteToggle.isOn)
         {
-            sfxMuteToggle.isOn = true;
+            uiMuteToggle.isOn = true;
         }
     }
 
-    private void ToggleMute(bool isUnmuted, string musicOrSFX)
+    private void SetGameEffectVolume(float volume)
     {
-        if (musicOrSFX == "music")
+        MusicManager.instance.SetGameEffectVolume(volume);
+        if (volume > 0 && !gameEffectMuteToggle.isOn)
+        {
+            gameEffectMuteToggle.isOn = true;
+        }
+    }
+
+    private void ToggleMute(bool isUnmuted, string category)
+    {
+        if (category == "music")
         {
             if (isUnmuted)
             {
@@ -92,15 +107,26 @@ public class MainMenuManager : MonoBehaviour
                 MusicManager.instance.SetMusicVolume(0);
             }
         }
-        else if (musicOrSFX == "sfx")
+        else if (category == "ui")
         {
             if (isUnmuted)
             {
-                MusicManager.instance.SetSFXVolume(sfxVolumeSlider.value);
+                MusicManager.instance.SetUIVolume(uiVolumeSlider.value);
             }
             else
             {
-                MusicManager.instance.SetSFXVolume(0);
+                MusicManager.instance.SetUIVolume(0);
+            }
+        }
+        else if (category == "gameEffect")
+        {
+            if (isUnmuted)
+            {
+                MusicManager.instance.SetGameEffectVolume(gameEffectVolumeSlider.value);
+            }
+            else
+            {
+                MusicManager.instance.SetGameEffectVolume(0);
             }
         }
     }
