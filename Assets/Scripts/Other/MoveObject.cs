@@ -31,6 +31,4 @@ public class MoveObject : MonoBehaviour
                 break;
         }
     }
-
-    // TODO: If out of seen, destroy the object
 }
