@@ -59,7 +59,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8514624333787529032}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -146,6 +146,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 8309840092379618900, guid: 79c2278b67edb6c4bbee810b02956537, type: 3}
   spawnInterval: 1
+  projectileSound: {fileID: 8300000, guid: d9419ba0bfac1e84a95418ac5851caf6, type: 3}
+  collisionParticles: {fileID: 198000013227194214, guid: 3228a22491941734bb83ad691d17fcb9, type: 3}
 --- !u!1001 &6459385492037815625
 PrefabInstance:
   m_ObjectHideFlags: 0
