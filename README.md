@@ -4,33 +4,53 @@ Welcome to the alpha version of the IMM-Project, an Interactive Multimedia Final
 
 ## Table of Contents
 
-- [Getting Started](#getting-started)
-- [Project Structure](#project-structure)
-- [Contributing](#contributing)
-- [License](#license)
+- [IMM-Project (Alpha Version)](#imm-project-alpha-version)
+  - [Table of Contents](#table-of-contents)
+  - [Main Section, not that boring stuff that is after this section](#main-section-not-that-boring-stuff-that-is-after-this-section)
+    - [Where to Play](#where-to-play)
+    - [Research](#research)
+  - [Getting Started](#getting-started)
+  - [Project Structure](#project-structure)
+  - [Contributing](#contributing)
+  - [License](#license)
     - [Authors](#authors)
-- [Acknowledgements](#acknowledgements)
+  - [Acknowledgements](#acknowledgements)
+    - [Sources](#sources)
 
-## In the section have to be something important
+## Main Section, not that boring stuff that is after this section
+
+> [!TIP]
+> This is the main section of the README file. It contains the main information about the project, everything you need to know about the project without Project Structure, Clone, Contributing and License sections. This section is the first thing that the user sees when they open the README file. It should contain the most important information about the project, such as where to play, research, and other important information.
+
+### Where to Play
+
+There is only WebGL build available for now (for Alpha version). You can play the game on your browser :computer:.
+
+> :warning: **Warning**: The WebGL build is not optimized for mobile devices. We recommend playing the game on a desktop or laptop for the best experience.
 
 > [!IMPORTANT]
-> Description and other important stuff, write about wwhere can find buid and play the game
-> - [Build on Github Pages](https://danyilt.github.io/IMM-Project/WebGL%20Build/Alpha)
-> - [Build on Unity Play](https://play.unity.com/en/games/be8af042-a14e-4193-aecf-f13a0b93ce2f/imm-project-alpha)
+> WebGL Buids released on:
+> - [Github Pages](https://danyilt.github.io/IMM-Project/WebGL%20Build/Beta)
+> - [Unity Play](https://play.unity.com/en/games/0b31d39e-a664-41dc-8a9d-9dc39a7e21a5/imm-project-beta)
 
 ### Research
 
+We have done some research to develop this project. Based on our experience on ads that display the similar games, but the game wasn't the same. We decided to create a game that will be similar to that ads. We have found some useful information that helped us to develop the game.
+
 > [!NOTE]
-> Add some links and information about the research that was done for the project.
+> Here is a list of sources used for development, inspiration, and learning. Use a structured approach:
+> - [Join Clash 3D Game](https://www.capermint.com/blog/cost-to-develop-join-clash-3d-game)
+> - [Basic concepts](https://www.youtube.com/watch?v=t2O7E4B34Zo)
+> - [Advisor](https://chatgpt.com/)
 
 ## Getting Started
 
 To get started with the project, follow these steps:
 
-- Install Unity Hub and Unity 6000.0.25f1 (we are using this version, but you can try other versions)
+- **Install Unity Hub and Unity** `6000.0.25f1` (we are using this version, but you can try other versions)
     1. Download and install Unity Hub from the [Unity website](https://unity3d.com/get-unity/download).
-    2. Install Unity Editor version `6000.0.25f1`
-- Clone the repository
+    2. Install Unity Editor
+- **Clone the repository**
     1. Clone the repository. (the alpha branch - this branch)
         ```sh
         git clone -b alpha https://github.com/DanyilT/IMM-Project
@@ -82,6 +102,10 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 The project was created by [Danyil Tymchuk](https://github.com/DanyilT) & [Artem Surzhenko](https://github.com/artemsa223)
 
 ## Acknowledgements
+
+### Sources
+
+Sources in [sources.md](sources.md)
 
 - The project uses the LiberationSans font, licensed under the SIL Open Font License, Version 1.1. See [Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt](Assets/TextMesh%20Pro/Fonts/LiberationSans%20-%20OFL.txt) for details.
 
