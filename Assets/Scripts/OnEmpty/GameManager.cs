@@ -7,7 +7,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float rowSpacing = 2f; // Space between rows
     [SerializeField] private float columnSpacing = 2f; // Space between players in the same row
 
-    public int playerCount = 1; // Starting with 1 for the main player
+    public int playerCount = 1; 
+    private const int MAX_PLAYERS = 5; 
     public int playerBonus = 1;
     public bool isWin = false;
     public bool isGameOver = false;
@@ -34,6 +35,11 @@ public class GameManager : MonoBehaviour
 
     public void CreatePlayerCopy()
     {
+         if (playerCount >= MAX_PLAYERS)
+        {
+            Debug.Log($"Cannot spawn more players. Maximum limit of {MAX_PLAYERS} reached!");
+            return;
+        }
         if (playerPrefab == null)
         {
             Debug.LogError("Player prefab is not assigned!");
