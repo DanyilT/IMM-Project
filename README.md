@@ -30,8 +30,8 @@ There is only WebGL build available for now (for Alpha version). You can play th
 
 > [!IMPORTANT]
 > WebGL Buids released on:
-> - [Github Pages](https://danyilt.github.io/IMM-Project/WebGL%20Build/Alpha)
-> - [Unity Play](https://play.unity.com/en/games/be8af042-a14e-4193-aecf-f13a0b93ce2f/imm-project-alpha)
+> - [Github Pages](https://danyilt.github.io/IMM-Project/WebGL%20Build/Beta)
+> - [Unity Play](https://play.unity.com/en/games/0b31d39e-a664-41dc-8a9d-9dc39a7e21a5/imm-project-beta)
 
 ### Research
 
