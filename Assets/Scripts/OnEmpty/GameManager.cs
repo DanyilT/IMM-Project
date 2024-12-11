@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public int playerCount = 1; 
     private const int MAX_PLAYERS = 6; 
     public int playerAmount = 1; 
-    // public int playerBonus = 1;
+     public int playerBonus = 1;
     public bool isWin = false;
     public bool isGameOver = false;
 
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     public void CreatePlayerCopy()
     {
-         if (playerAmount >= MAX_PLAYERS)
+        if (playerAmount >= MAX_PLAYERS)
         {
             Debug.Log($"Cannot spawn more players. Maximum limit of {MAX_PLAYERS} reached!");
             return;

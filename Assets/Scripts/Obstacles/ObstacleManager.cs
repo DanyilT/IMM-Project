@@ -63,7 +63,6 @@ public class ObstacleManager : MonoBehaviour
     {
         GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         obstacleHitCount += gameManager.playerCount;
-        //obstacleHitCount++;
         Destroy(other.gameObject);
     }
 
