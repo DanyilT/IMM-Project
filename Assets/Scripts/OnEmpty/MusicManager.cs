@@ -8,17 +8,20 @@ public class MusicManager : MonoBehaviour
 {
     public static MusicManager instance;
     private AudioSource backgroundMusic;
-    private List<AudioSource> sfxAudioSources = new List<AudioSource>();
+    private List<AudioSource> uiAudioSources = new List<AudioSource>();
+    private List<AudioSource> gameEffectAudioSources = new List<AudioSource>();
 
     [SerializeField] private AudioClip buttonClickSound;
     [SerializeField] private AudioClip toggleClickSound;
     [SerializeField] private AudioClip sliderChangeSound;
 
     private float musicVolume = 1.0f; public float MusicVolume => musicVolume;
-    private float sfxVolume = 1.0f; public float SFXVolume => sfxVolume;
+    private float uiVolume = 1.0f; public float UIVolume => uiVolume;
+    public float gameEffectVolume = 1.0f; public float GameEffectVolume => gameEffectVolume;
 
     private const string MusicVolumeKey = "MusicVolume";
-    private const string SFXVolumeKey = "SFXVolume";
+    private const string UIVolumeKey = "UIVolume";
+    private const string GameEffectVolumeKey = "GameEffectVolume";
 
     void Awake()
     {
@@ -64,22 +67,44 @@ public class MusicManager : MonoBehaviour
         SaveVolumeSettings();
     }
 
-    public void SetSFXVolume(float volume)
+    public void SetUIVolume(float volume)
     {
-        sfxVolume = volume;
-        foreach (var audioSource in sfxAudioSources)
+        uiVolume = volume;
+        foreach (var audioSource in uiAudioSources)
         {
             if (audioSource != null)
             {
-                audioSource.volume = sfxVolume;
+                audioSource.volume = uiVolume;
             }
         }
         SaveVolumeSettings();
     }
 
+    public void SetGameEffectVolume(float volume)
+    {
+        gameEffectVolume = volume;
+        foreach (var audioSource in gameEffectAudioSources)
+        {
+            if (audioSource != null)
+            {
+                audioSource.volume = gameEffectVolume;
+            }
+        }
+        SaveVolumeSettings();
+    }
+
+    public void RegisterGameEffectAudioSource(AudioSource audioSource)
+    {
+        if (!gameEffectAudioSources.Contains(audioSource))
+        {
+            audioSource.volume = gameEffectVolume;
+            gameEffectAudioSources.Add(audioSource);
+        }
+    }
+
     public void AssignClickSounds()
     {
-        sfxAudioSources.Clear();
+        uiAudioSources.Clear();
 
         Button[] buttons = Resources.FindObjectsOfTypeAll<Button>();
         Toggle[] toggles = Resources.FindObjectsOfTypeAll<Toggle>();
@@ -90,8 +115,8 @@ public class MusicManager : MonoBehaviour
             if (button.gameObject.scene.name == null) continue;
             AudioSource audioSource = button.gameObject.AddComponent<AudioSource>();
             audioSource.clip = buttonClickSound;
-            audioSource.volume = sfxVolume;
-            sfxAudioSources.Add(audioSource);
+            audioSource.volume = uiVolume;
+            uiAudioSources.Add(audioSource);
             button.onClick.AddListener(() => PlaySound(audioSource));
         }
 
@@ -100,8 +125,8 @@ public class MusicManager : MonoBehaviour
             if (toggle.gameObject.scene.name == null) continue;
             AudioSource audioSource = toggle.gameObject.AddComponent<AudioSource>();
             audioSource.clip = toggleClickSound;
-            audioSource.volume = sfxVolume;
-            sfxAudioSources.Add(audioSource);
+            audioSource.volume = uiVolume;
+            uiAudioSources.Add(audioSource);
             toggle.onValueChanged.AddListener((value) => PlaySound(audioSource));
         }
 
@@ -110,8 +135,8 @@ public class MusicManager : MonoBehaviour
             if (slider.gameObject.scene.name == null) continue;
             AudioSource audioSource = slider.gameObject.AddComponent<AudioSource>();
             audioSource.clip = sliderChangeSound;
-            audioSource.volume = sfxVolume;
-            sfxAudioSources.Add(audioSource);
+            audioSource.volume = uiVolume;
+            uiAudioSources.Add(audioSource);
 
             EventTrigger trigger = slider.gameObject.AddComponent<EventTrigger>();
             EventTrigger.Entry entry = new EventTrigger.Entry();
@@ -132,7 +157,8 @@ public class MusicManager : MonoBehaviour
     private void SaveVolumeSettings()
     {
         PlayerPrefs.SetFloat(MusicVolumeKey, musicVolume);
-        PlayerPrefs.SetFloat(SFXVolumeKey, sfxVolume);
+        PlayerPrefs.SetFloat(UIVolumeKey, uiVolume);
+        PlayerPrefs.SetFloat(GameEffectVolumeKey, gameEffectVolume);
         PlayerPrefs.Save();
     }
 
@@ -143,9 +169,14 @@ public class MusicManager : MonoBehaviour
             musicVolume = PlayerPrefs.GetFloat(MusicVolumeKey);
         }
 
-        if (PlayerPrefs.HasKey(SFXVolumeKey))
+        if (PlayerPrefs.HasKey(UIVolumeKey))
         {
-            sfxVolume = PlayerPrefs.GetFloat(SFXVolumeKey);
+            uiVolume = PlayerPrefs.GetFloat(UIVolumeKey);
+        }
+
+        if (PlayerPrefs.HasKey(GameEffectVolumeKey))
+        {
+            gameEffectVolume = PlayerPrefs.GetFloat(GameEffectVolumeKey);
         }
     }
 }
