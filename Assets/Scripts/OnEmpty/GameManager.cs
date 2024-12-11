@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float columnSpacing = 2f; // Space between players in the same row
 
     public int playerCount = 1; 
-    private const int MAX_PLAYERS = 5; 
+    private const int MAX_PLAYERS = 6; 
+    public int playerAmount = 1; 
     public int playerBonus = 1;
     public bool isWin = false;
     public bool isGameOver = false;
@@ -35,7 +36,7 @@ public class GameManager : MonoBehaviour
 
     public void CreatePlayerCopy()
     {
-         if (playerCount >= MAX_PLAYERS)
+         if (playerAmount >= MAX_PLAYERS)
         {
             Debug.Log($"Cannot spawn more players. Maximum limit of {MAX_PLAYERS} reached!");
             return;
@@ -55,7 +56,7 @@ public class GameManager : MonoBehaviour
         // Get the next spawn position
         Vector3 relativePosition = spawnPositions[currentSpawnIndex];
         Vector3 worldPosition = mainPlayer.position + relativePosition;
-        worldPosition.y = 1f; // Set consistent Y position
+        worldPosition.y = 0f; // Set consistent Y position
 
         // Instantiate the player copy
         GameObject playerClone = Instantiate(playerPrefab, worldPosition, mainPlayer.rotation);
@@ -70,6 +71,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.LogError("Failed to create player copy.");
         }
+        playerAmount+=1;
     }
 
     private void CalculateSpawnPositions(int count)
@@ -99,7 +101,7 @@ public class GameManager : MonoBehaviour
             {
                 Vector3 position = new Vector3(
                     startX + (i * columnSpacing),
-                    0,
+                    0f,
                     -rowZOffset // Negative to spawn behind the main player
                 );
                 spawnPositions.Add(position);
