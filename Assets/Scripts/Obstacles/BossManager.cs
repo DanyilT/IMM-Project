@@ -41,7 +41,7 @@ public class BossManager : MonoBehaviour
     private void HandleProjectileCollision(Collider other)
     {
         GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        bossHitCount += gameManager.playerCount * gameManager.playerBonus;
+        bossHitCount += gameManager.playerCount;
         //obstacleHitCount++;
         Destroy(other.gameObject);
         if (bossHitCount >= 0)
