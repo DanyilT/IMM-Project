@@ -638,7 +638,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -880, y: 580}
+  m_AnchoredPosition: {x: -791, y: 388}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &389159986
@@ -698,7 +698,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.90188676, g: 0.6449341, b: 0.85493535, a: 1}
+  m_Color: {r: 0.90188676, g: 0.09359192, b: 0.7549242, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -807,13 +807,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1750,8 +1750,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Material: {fileID: 2100000, guid: 0ae8aab4ae40e7741a636cf6e5136a55, type: 2}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2863,7 +2863,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -250}
+  m_AnchoredPosition: {x: 0, y: -183}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1209655269
@@ -3588,8 +3588,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 155, y: 641}
-  m_SizeDelta: {x: 1500, y: 50}
+  m_AnchoredPosition: {x: 108, y: 458}
+  m_SizeDelta: {x: 1100, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1738106297
 MonoBehaviour:
@@ -3614,21 +3614,21 @@ MonoBehaviour:
   m_text: "                                                 How to Play\nWelcome
     to the Wall Breaker! In this game, you control a player who moves forward automatically
     while shooting at walls. Your mission is to destroy walls strategically to power
-    up your army while avoiding deadly red walls.\nControls\n\nShooting: Automatic\nMovement:
-    Character moves forward automatically( Press 'A'to go left, 'D' to go right)\nArmy
-    Control: Your army follows your lead\n\n                                     
+    up your army while avoiding deadly red walls.\n\n                                                 
+    Controls\nShooting: Automatic\nMovement: Character moves forward automatically(
+    Press 'A'to go left, 'D' to go right)\nArmy Control: Your army follows your lead\n\n                                                  
     Walls\nRegular Walls: Can be destroyed for bonuses\nRed Walls: DANGER! Hitting
-    these means game over\nSpecial Walls: Some walls contain power-ups\n\n                                    
+    these means game over\nSpecial Walls: Some walls contain power-ups\n\n                                                  
     Bullet Damage Boost\nDestroy certain walls to increase your shooting power\nMore
-    damage = faster wall destruction\n\n\n                                    Army
-    Size Increase\nCollect power-ups to grow your army\nLarger army = more firepower\n\n\n                                  
+    damage = faster wall destruction\n\n\n                                                 
+    Army Size Increase\nCollect power-ups to grow your army\nLarger army = more firepower\n\n\n                                                 
     Tips for Success\nAlways watch out for red walls - they mean instant defeat!\nStrategically
     choose which walls to destroy\nCollect power-ups whenever possible to strengthen
     your forces\nThe larger your army grows, the more powerful you become\nKeep moving
-    and shooting to maintain momentum\n\n                                       
+    and shooting to maintain momentum\n\n                                                 
     Objective\nSurvive as long as possible while building the largest and most powerful
     army you can. Break walls, collect power-ups, and avoid red walls to achieve
-    the highest score!\n                                         Warning\nRemember:
+    the highest score!\n                                                   Warning\nRemember:
     RED WALLS = GAME OVER! Always stay alert and ready to dodge them."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3656,13 +3656,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -4230,7 +4230,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -25, y: -464}
+  m_AnchoredPosition: {x: 6, y: -6}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2109053090
@@ -4280,13 +4280,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
