@@ -34,17 +34,15 @@ public class BossManager : MonoBehaviour
     {
         GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
         gameManager.playerCount -= bossHitCount;
-        //gameManager.CreatePlayerCopies(obstacleHitCount);
         Destroy(gameObject);
     }
 
     private void HandleProjectileCollision(Collider other)
     {
         GameManager gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-        bossHitCount += gameManager.playerCount;
-        //obstacleHitCount++;
+        bossHitCount -= gameManager.playerCount;
         Destroy(other.gameObject);
-        if (bossHitCount >= 0)
+        if (bossHitCount <= 0)
         {
             Destroy(gameObject);
         }
